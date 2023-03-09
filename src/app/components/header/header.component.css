@@ -1,0 +1,16 @@
+nav > a {
+    padding: 5px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav > a.active {
+    background-color: black;
+}
+
+.mat-toolbar {
+    background-color: blueviolet;
+    height: 12%;
+    padding-top: 2%;
+    padding-left: 0.5%;
+}
