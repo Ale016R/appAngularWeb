@@ -1,5 +1,5 @@
-import { Component, AfterViewInit } from '@angular/core';
-import Swiper from 'swiper';
+import { Component, OnInit } from '@angular/core';
+import { ProductosService } from 'src/app/services/productos.service';
 //import 'swiper/swiper-bundle.css';
 
 @Component({
@@ -7,12 +7,13 @@ import Swiper from 'swiper';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit {
 
-  mySwiper: Swiper;
+  constructor(public productosService: ProductosService) { }
 
-  ngAfterViewInit() {
-    this.mySwiper = new Swiper(".swiper-container");
+
+  ngOnInit() {
+    this.productosService.getProducts();
   }
 
 }
